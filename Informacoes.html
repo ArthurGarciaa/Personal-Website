@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="pt-br">
+    <head>
+        <title>Informações</title>
+        <style>
+            body{
+                background-color: rgb(153, 102, 204);
+                font-family: Arial, sans-serif;
+                margin-top: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            .botao1, .botao2{
+                position: relative;
+                overflow: hidden;
+                font-size: 18px;
+                background-color: transparent;
+                cursor: pointer;
+                text-align: center;
+                border: none;
+                height: 100%;
+                color: white;
+                width: 130px;
+                border-radius: 50px;
+            }
+            p{
+                font-size: 19px;
+                color: black;
+            }
+            .retangulo{
+                background-color: rgb(75,0,130);
+                height: 80px;
+            }
+            .botao1::before, .botao2::before{
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 220%;
+                height: 220%;
+                border-radius: 50%;
+                background: rgba(255,255,255,0.45);
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+                opacity: 0;
+            }
+            .botao1:hover::before, .botao2:hover::before{
+                animation: rippleHover 900ms ease-out forwards;
+            }
+            @keyframes rippleHover {
+                0% {transform: translate(-50%, -50%) scale(0.05); opacity: 0.6;}
+                100% {transform: translate(-50%, -50%) scale(1); opacity: 0;}
+            }
+            @media (hover: none) and (pointer: coarse) {
+                .botao1:hover::before, .botao2:hover::before {animation:none;}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="retangulo">
+            <button class="botao1" onclick="window.location.href='index.html'">Página Inicial</button>
+            <button class="botao2" onclick="window.location.href='Contato.html'">Contato</button>
+        </div>
+        <p>
+            Ainda estou aprendendo a como programar um site, mas quero aprender o máximo que conseguir
+        </p>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contatos</title>
+        <script>
+            function mostrarContatos(){
+                if (Contatos.style.display === 'block'){
+                    Contatos.style.display = 'none';
+                } else{
+                    Contatos.style.display = 'block';
+                }
+            }
+        </script>
+        <style>
+            body{
+                background-color: rgb(153, 102, 204);
+                font-family: Arial, sans-serif;
+                margin-top: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            h1{
+                margin-left: 23px;
+                font-size:30px;
+                color:blueviolet;
+                text-align: left;
+            }
+            h3{
+                font-size: 23px;
+                margin-left:40px;
+                color:blueviolet;
+                text-align: left;
+            }
+            p{
+                font-size: 23px;
+                text-align: center;
+            }
+            .botao1, .botao2, .botao3{
+                position: relative;
+                overflow: hidden;
+                font-size: 18px;
+                background-color: transparent;
+                cursor: pointer;
+                text-align: center;
+                height: 100%;
+                border: none;
+                color: white;
+                width: 130px;
+                border-radius: 50px;
+            }
+            .botao1::before, .botao2::before, .botao3::before{
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 220%;
+                height: 220%;
+                border-radius: 50%;
+                background: rgba(255,255,255,0.45);
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+                opacity: 0;
+            }
+            .botao1:hover::before, .botao2:hover::before, .botao3:hover::before{
+                animation: rippleHover 900ms ease-out forwards;
+            }
+            @keyframes rippleHover {
+                0% {transform: translate(-50%, -50%) scale(0.05); opacity: 0.6;}
+                100% {transform: translate(-50%, -50%) scale(1); opacity: 0;}
+            }
+            @media (hover: none) and (pointer: coarse) {
+                .botao1:hover::before, .botao2:hover::before, .botao3:hover::before {animation:none;}
+            }
+            .retangulo{
+                background-color: rgb(75,0,130);
+                height: 80px;
+            }
+            #Contatos{
+                background-color: white;
+                height: 100px;
+                width: 450px;
+                display: none;
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+            .botao3{
+                margin-left: 60%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="retangulo">
+            <button class="botao1" onclick="window.location.href='index.html'">Página Inicial</button>
+            <button class="botao2" onclick="window.location.href='Informacoes.html'">Informações</button>
+            <button class="botao3" onclick="mostrarContatos()">Contato</button>
+        </div>
+        <div id="Contatos">
+            <p>E-mail: arthur.garciiaa12@.gmail.com</p>
+            <p>Celular: (51) 9 9374-3730</p>
+        </div>
+    </body>
+</html>

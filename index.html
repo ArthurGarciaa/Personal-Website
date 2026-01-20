@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Página Inicial</title>
+        <style>
+            body {
+                background-color: rgb(153, 102, 204);
+                font-family: Arial, sans-serif;
+                margin-top: 0px;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            h1, h3 {
+                color: black;
+                margin-left: 2%;
+            }
+            .botao1,.botao2{
+                position: relative;
+                overflow: hidden;
+                font-size: 18px;
+                background-color: transparent;
+                cursor: pointer;
+                border: none;
+                text-align: center;
+                height: 100%;
+                color: white;
+                width: 130px;
+                border-radius: 50px;
+            }
+            footer{
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+            .botao1::before, .botao2::before{
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 220%;
+                height: 220%;
+                border-radius: 50%;
+                background: rgba(255,255,255,0.45);
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+                opacity: 0;
+            }
+            .botao1:hover::before, .botao2:hover::before{
+                animation: rippleHover 900ms ease-out forwards;
+            }
+            @keyframes rippleHover {
+                0% {transform: translate(-50%, -50%) scale(0.05); opacity: 0.6;}
+                100% {transform: translate(-50%, -50%) scale(1); opacity: 0;}
+            }
+            @media (hover: none) and (pointer: coarse) {
+                .botao1:hover::before, .botao2:hover::before {animation:none;}
+            }
+            .retangulo{
+                background-color: rgb(75,0,130);
+                height: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="retangulo">
+            <button class="botao1" onclick="window.location.href='contato.html'">Contato</button>
+            <button class="botao2" onclick="window.location.href='Informacoes.html'">Informações</button>
+        </div>
+        <h1>Olá, mundo!</h1>
+        <h3>Esse é o meu primeiro site</h3>
+        <h3>Estou aprendendo css, html e javascript</h3>
+    </body>
+</html>
