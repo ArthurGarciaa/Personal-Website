@@ -10,12 +10,13 @@
                 margin-left: 0px;
                 margin-right: 0px;
             }
-            h1, h3 {
+            h1 {
+                font-size: 23px;
                 color: lightgray;
                 text-align: center;
                 margin-top: 10px;
             }
-            .botao1,.botao2{
+            .botao1, .botao2, .botao3, .btn-github{
                 position: relative;
                 overflow: hidden;
                 font-size: 18px;
@@ -28,11 +29,15 @@
                 width: 130px;
                 border-radius: 50px;
             }
+            .btn-github{
+                margin-top: 20px;
+                margin-left: 900px;
+            }
             footer{
                 margin-top: 0px;
                 margin-left: 0px;
             }
-            .botao1::before, .botao2::before{
+            .botao1::before, .botao2::before, .botao3::before, .btn-github::before{
                 content: "";
                 position: absolute;
                 left: 50%;
@@ -45,7 +50,7 @@
                 pointer-events: none;
                 opacity: 0;
             }
-            .botao1:hover::before, .botao2:hover::before{
+            .botao1:hover::before, .botao2:hover::before, .botao3:hover::before, .btn-github.botao1:hover::before{
                 animation: rippleHover 900ms ease-out forwards;
             }
             @keyframes rippleHover {
@@ -65,9 +70,14 @@
         <div class="retangulo">
             <button class="botao1" onclick="window.location.href='contato.html'">Contato</button>
             <button class="botao2" onclick="window.location.href='Informacoes.html'">Informações</button>
+            <button class="botao3">English</button>
         </div>
-        <h1>Olá, mundo!</h1>
-        <h3>Este é o meu primeiro site</h3>
-        <h3>Estou aprendendo css, html e javascript</h3>
+        <h1>Arthur Garcia
+            Estudante de Ciência da computação
+            Focado em Python, Desenvolvimento Web e Desenvolvimento de jogos
+            
+        </h1>
+        </br>
+        <a href="https://github.com/ArthurGarciaa" target="_blank" class="btn-github">Github</a>
     </body>
 </html>
