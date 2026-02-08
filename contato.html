@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Contatos</title>
+        <title>Contact</title>
         <script>
             function mostrarContatos(){
                 if (Contatos.style.display === 'none'){
@@ -88,17 +88,31 @@
             .botao3{
                 margin-left: 60%;
             }
+            .linkedin-button {
+                background-color: #0077b5;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                display: inline-block;
+                transition: background-color 0.3s ease;
+            }
+            .linkedin-button:hover {
+                background-color: #005582;
+                color: #ffffff;
+            }
         </style>
     </head>
     <body>
         <div class="retangulo">
-            <button class="botao1" onclick="window.location.href='index.html'">Página Inicial</button>
-            <button class="botao2" onclick="window.location.href='Informacoes.html'">Informações</button>
-            <button class="botao3" onclick="mostrarContatos()">Contato</button>
+            <button class="botao1" onclick="window.location.href='index.html'">Home</button>
+            <button class="botao2" onclick="window.location.href='Informacoes.html'">About</button>
+            <button class="botao3" onclick="mostrarContatos()">Contact</button>
         </div>
         <div id="Contatos">
             <p>E-mail: arthur.garciiaa12@.gmail.com</p>
-            <p>Celular: (51) 9 9374-3730</p>
+            <a href="https://www.linkedin.com/in/arthur-garcia-dev/" target="_blank" class="linkedin_button">LinkedIn</a>
         </div>
     </body>
 </html>
